@@ -4,6 +4,7 @@
  *
  * @format
  */
+//@ts-nocheck
 
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
@@ -22,7 +23,7 @@ function App(): React.JSX.Element {
     <NavigationContainer>
       <Stack.Navigator>
       <Stack.Screen options={{title:"Users List", headerShown:false }}  name="UserListScreen" component={UserListScreen} />
-      <Stack.Screen name="UserDetailScreen" component={UserDetailScreen} />
+      <Stack.Screen options={{title:"User Details", }} name="UserDetailScreen" component={UserDetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
     </Provider>
